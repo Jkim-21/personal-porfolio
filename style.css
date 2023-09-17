@@ -3,6 +3,7 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
+    /* outline: 1px dotted red; */
 }
 
 body {
@@ -18,6 +19,8 @@ body {
 .container {
     padding: 10px 10%;
 }
+
+/* ----------- navigation bar ------------------ */
 
 nav {
     display: flex;
@@ -59,13 +62,16 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+/* ----------- header ------------------ */
+
 .header-content {
-    display:flex;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
 }
 
 .header-text {
-    margin-top: 20%;
     font-size: 30px;
 }
 
@@ -75,7 +81,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: light-blue;
+    color: #38b6ff;
 }
 
 
@@ -83,6 +89,87 @@ nav ul li a:hover::after {
     max-width: 100%;
     height: 500px;
     object-fit: contain;
-    margin: 100px 0;
+    border-radius: 15px;
+
 }
 
+/* ----------- about ------------------ */
+
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+.about-col-1 img {
+    width: 500px;
+    border-radius: 15px;
+} 
+
+.about-col-2 {
+    flex-basis: 50%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px; 
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+} 
+
+.tab-links::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+} 
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
