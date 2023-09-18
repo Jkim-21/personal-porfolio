@@ -351,11 +351,11 @@ form .btn2 {
     margin-top: 20px;
 }
 
-/* -----------------css for small screens ----------------- */
 nav .fa-solid, nav .fa-regular {
     display: none;
 }
 
+/* -----------------css for small screens ----------------- */
 @media only screen and (max-width: 600px) {
     .container {
         padding: 0px 20px;
