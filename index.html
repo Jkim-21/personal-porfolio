@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
-    <link rel= "stylesheet" href = "style.css">
+    <link rel= "stylesheet" href = "css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" 
+    rel="stylesheet">
     <script src="https://kit.fontawesome.com/d3ad35b7b1.js" crossorigin="anonymous"></script>
+    <script src = "script.js" defer></script>
 </head>
 <body>
 <div id="header">
@@ -50,7 +52,10 @@
             <div class="about-col-2">
                 <h1 class = "sub-title">About Me</h1>
                 <p>
-                    I am an rising junior student at Middlebury College majoring in computer science and statistics. I am currently taking a gap year after completing my sophomore year at Middlebury to enhance my knowledge and skills in software development through real-world opportunities and experiences. 
+                    I am an rising junior student at Middlebury College majoring in computer science 
+                    and statistics. I am currently taking a gap year after completing my sophomore 
+                    year at Middlebury to enhance my knowledge and skills in software development 
+                    through real-world opportunities and experiences. 
                 </p>
 
                 <div class="tab-titles">
@@ -82,7 +87,8 @@
                 <div class="tab-contents" id = "education">
                     <ul>
                         <li><span>September 2021 - May 2026</span><br>Middlebury College</li>
-                        <li><span>September 2017 - May 2021</span><br>Buckingham Browne &amp; Nichols High School</li>
+                        <li><span>September 2017 - May 2021</span><br>Buckingham Browne &amp; 
+                            Nichols High School</li>
                     </ul>
                 </div>
             </div>
@@ -98,7 +104,8 @@
                 <img src = "images/work-1.png">
                 <div class="layer">
                     <h3>Lyford Lab Eye Gaze Research</h3>
-                    <p>Predicting Students&apos; Strategies when Analyzing Histograms Through Machine Learning
+                    <p>Predicting Students&apos; Strategies when Analyzing Histograms Through 
+                        Machine Learning
                     </p>
                     <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
@@ -124,9 +131,12 @@
                 <p><i class="fa-solid fa-paper-plane"></i>jjkim@middlebury.com</p>
                 <p><i class="fa-solid fa-square-phone"></i>617-932-9770</p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/jonathanjiyukim/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/jkim.21/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://twitter.com/Jkim_21"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/jonathanjiyukim/">
+                        <i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/jkim.21/">
+                        <i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/Jkim_21">
+                        <i class="fa-brands fa-square-twitter"></i></a>
                 </div>
             </div>
             <div class="contact-right">
@@ -142,50 +152,6 @@
     </div>
     <div class="copyright"><p>Copyright &copy; 2023 Jonathan</p></div>
 </div>
-
-<script>
-    let tablinks = document.getElementsByClassName("tab-links");
-    let tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname) {
-        for (tablink of tablinks) {
-            tablink.classList.remove("active-link"); 
-        }
-        for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab"); 
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-
-<script>
-    let sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
-</script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx8gbhQSlTKjUwFXf0hVor1JCmkuHQYcEGjDGLvF0rVxG5ttOgWOz2sByGMJbiQJPKr/exec';
-    const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById("msg");
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.textContent = "Message sent successfully";
-            setTimeout(function() {
-                msg.textContent = ""
-            }, 4000)
-            form.reset();
-        })
-        .catch(error => console.error('Error!', error.message));
-    })
-  </script>
 </body>
 </html>     
 
