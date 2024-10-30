@@ -19,8 +19,8 @@ body {
 }
 
 /* Creates space between the content from the page itself*/
-.container {
-    padding: 10px 10%;
+.page-container {
+    padding: 30px;
 }
 
 /* ----------- navigation bar ------------------ */
