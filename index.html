@@ -1,158 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel= "stylesheet" href = "css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" 
     rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d3ad35b7b1.js" crossorigin="anonymous"></script>
-    <script src = "script.js" defer></script>
-</head>
-<body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src = "images/logo.png" class = "logo">
-            <ul id = "sidemenu">
-                <li><a href = "#header">Home</a></li>
-                <li><a href = "#about">About</a></li>
-                <li><a href = "#portfolio">Portfolio</a></li>
-                <li><a href = "#contact">Contact</a></li>
-                <i class="fa-regular fa-circle-xmark" onclick = "closemenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
-        </nav>
-        <div class="header-content">
-            <div class="header-text">
-                <p>Aspiring Software Developer</p>
-                <h1>
-                    Hi, I'm <span>Jonathan</span><br> Kim from Boston
-                </h1>
-            </div>
-            <div class="image-container">
-                <img src = "images/user.jpeg" alt = "photo of Jonathan Kim" class="image-full">
-                <img src="images/user-mobile.jpeg" alt = "photo of Jonathan Kim" class="image-mobile">
- 
-            </div>
-        </div>
-    </div>
-</div>
-<!------------- about ---------------->
-<div id = "about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/hero.jpeg" alt="photo two of Jonathan Kim">
-            </div>
-
-            <div class="about-col-2">
-                <h1 class = "sub-title">About Me</h1>
-                <p>
-                    I am an rising junior student at Middlebury College majoring in computer science 
-                    and statistics. I am currently taking a gap year after completing my sophomore 
-                    year at Middlebury to enhance my knowledge and skills in software development 
-                    through real-world opportunities and experiences. 
-                </p>
-
-                <div class="tab-titles">
-                    <p class = "tab-links active-link" onclick = "opentab('skills')">Skills</p>
-                    <p class = "tab-links" onclick = "opentab('experience')">Experience</p>
-                    <p class = "tab-links" onclick = "opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id = "skills">
-                    <ul>
-                        <li><span>Object Oriented Programming</span><br>Python, Java, C</li>
-                        <li><span>Web Development</span><br>HTML/CSS, JavaScript </li>
-                        <li><span>Statistical Analysis &amp; ML</span><br> R</li>
-                        <li><span>Version Control</span><br> Git, Github</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id = "experience">
-                    <ul>
-                        <li><span>June 2023 - Present</span><br>Machine learning research
-                        intern at Lyford Labs at Middlebury College</li>
-                        <li><span>February 2022 - Present</span><br>Computer science teacher
-                        assistant at the Middlebury College Center for Teaching, Learning, and 
-                        Research. </li>
-                        <li><span>June 2022 - August 2022</span><br> Cancer biology research 
-                            assistant for Maitra Lab at MD Anderson Cancer Center </li>
-                        <li><span>May 2020 - August 2021</span><br> Psychiatric biology research 
-                            assistant for Karmacharya Lab at Massachusetts General Hospital </li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id = "education">
-                    <ul>
-                        <li><span>September 2021 - May 2026</span><br>Middlebury College</li>
-                        <li><span>September 2017 - May 2021</span><br>Buckingham Browne &amp; 
-                            Nichols High School</li>
-                    </ul>
-                </div>
-            </div>
-        </div> 
-    </div>
-</div>
-<!------------ portfolio ------------------>
-<div id="portfolio">
-    <div class="container">
-        <h1 class="subt-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src = "images/work-1.png">
-                <div class="layer">
-                    <h3>Lyford Lab Eye Gaze Research</h3>
-                    <p>Predicting Students&apos; Strategies when Analyzing Histograms Through 
-                        Machine Learning
-                    </p>
-                    <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work img2">
-                <img src = "images/work-2.png">
-                <div class="layer">
-                    <h3>More projects coming soon!</h3>
-                    <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-        </div>
-        <a href = "#" class ="btn"> See more</a>
-    </div>
-</div>
-
-<!------------------contact---------------->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class = "sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>jjkim@middlebury.com</p>
-                <p><i class="fa-solid fa-square-phone"></i>617-932-9770</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/jonathanjiyukim/">
-                        <i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/jkim.21/">
-                        <i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://twitter.com/Jkim_21">
-                        <i class="fa-brands fa-square-twitter"></i></a>
-                </div>
-            </div>
-            <div class="contact-right">
-                <form name = "submit-to-google-sheet">
-                    <input type = "text" name = "Name" placeholder = "Your name" required>
-                    <input type = "email" name = "Email" placeholder = "Your Email" required>
-                    <textarea name = "Message" rows = "6" placeholder = "Your message"></textarea>
-                    <button type = "submit" class = "btn btn2">Submit</button>
-                </form>
-                <span id = "msg"></span>
-            </div>
-        </div>
-    </div>
-    <div class="copyright"><p>Copyright &copy; 2023 Jonathan</p></div>
-</div>
-</body>
-</html>     
-
     
+    <script src="https://kit.fontawesome.com/d3ad35b7b1.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
