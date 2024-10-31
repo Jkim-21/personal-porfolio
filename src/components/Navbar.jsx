@@ -15,7 +15,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav>
+        <nav className='section'>
             <img 
                 src = {logo} 
                 className = "logo"
