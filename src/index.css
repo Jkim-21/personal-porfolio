@@ -189,7 +189,7 @@ nav ul li a:hover::after {
   color: #ababab;
 }
 
-.about-text p:first-of-type {
+.about-text > p:first-of-type {
   margin-bottom: 1rem;
 }
 
